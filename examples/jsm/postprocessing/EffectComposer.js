@@ -10,7 +10,8 @@ import {
 	PlaneBufferGeometry,
 	RGBAFormat,
 	Vector2,
-	WebGLRenderTarget
+	WebGLRenderTarget,
+	FloatType
 } from "../../../build/three.module.js";
 import { CopyShader } from "../shaders/CopyShader.js";
 import { ShaderPass } from "../postprocessing/ShaderPass.js";
@@ -27,7 +28,8 @@ var EffectComposer = function ( renderer, renderTarget ) {
 			minFilter: LinearFilter,
 			magFilter: LinearFilter,
 			format: RGBAFormat,
-			stencilBuffer: false
+			stencilBuffer: false,
+			type: FloatType
 		};
 
 		var size = renderer.getSize( new Vector2() );
